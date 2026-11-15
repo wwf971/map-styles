@@ -1,0 +1,146 @@
+{
+  "id": "designated-city",
+  "label": "政令指定都市",
+  "items": [
+    {
+      "id": "sapporo",
+      "label": "札幌市",
+      "regionLabel": "北海道・東北",
+      "prefectureLabel": "北海道",
+      "municipalityIdList": ["01100", "01101", "01102", "01103", "01104", "01105", "01106", "01107", "01108", "01109", "01110"]
+    },
+    {
+      "id": "sendai",
+      "label": "仙台市",
+      "regionLabel": "北海道・東北",
+      "prefectureLabel": "宮城県",
+      "municipalityIdList": ["04100", "04101", "04102", "04103", "04104", "04105"]
+    },
+    {
+      "id": "saitama",
+      "label": "さいたま市",
+      "regionLabel": "関東",
+      "prefectureLabel": "埼玉県",
+      "municipalityIdList": ["11100", "11101", "11102", "11103", "11104", "11105", "11106", "11107", "11108", "11109", "11110"]
+    },
+    {
+      "id": "chiba",
+      "label": "千葉市",
+      "regionLabel": "関東",
+      "prefectureLabel": "千葉県",
+      "municipalityIdList": ["12100", "12101", "12102", "12103", "12104", "12105", "12106"]
+    },
+    {
+      "id": "yokohama",
+      "label": "横浜市",
+      "regionLabel": "関東",
+      "prefectureLabel": "神奈川県",
+      "municipalityIdList": ["14100", "14101", "14102", "14103", "14104", "14105", "14106", "14107", "14108", "14109", "14110", "14111", "14112", "14113", "14114", "14115", "14116", "14117", "14118"]
+    },
+    {
+      "id": "kawasaki",
+      "label": "川崎市",
+      "regionLabel": "関東",
+      "prefectureLabel": "神奈川県",
+      "municipalityIdList": ["14130", "14131", "14132", "14133", "14134", "14135", "14136", "14137"]
+    },
+    {
+      "id": "sagamihara",
+      "label": "相模原市",
+      "regionLabel": "関東",
+      "prefectureLabel": "神奈川県",
+      "municipalityIdList": ["14150", "14151", "14152", "14153"]
+    },
+    {
+      "id": "niigata",
+      "label": "新潟市",
+      "regionLabel": "甲信越・東海",
+      "prefectureLabel": "新潟県",
+      "municipalityIdList": ["15100", "15101", "15102", "15103", "15104", "15105", "15106", "15107", "15108"]
+    },
+    {
+      "id": "shizuoka",
+      "label": "静岡市",
+      "regionLabel": "甲信越・東海",
+      "prefectureLabel": "静岡県",
+      "municipalityIdList": ["22100", "22101", "22102", "22103"]
+    },
+    {
+      "id": "hamamatsu",
+      "label": "浜松市",
+      "regionLabel": "甲信越・東海",
+      "prefectureLabel": "静岡県",
+      "municipalityIdList": ["22130", "22131", "22132", "22133", "22134", "22135", "22136", "22137"]
+    },
+    {
+      "id": "nagoya",
+      "label": "名古屋市",
+      "regionLabel": "甲信越・東海",
+      "prefectureLabel": "愛知県",
+      "municipalityIdList": ["23100", "23101", "23102", "23103", "23104", "23105", "23106", "23107", "23108", "23109", "23110", "23111", "23112", "23113", "23114", "23115", "23116"]
+    },
+    {
+      "id": "kyoto",
+      "label": "京都市",
+      "regionLabel": "近畿",
+      "prefectureLabel": "京都府",
+      "municipalityIdList": ["26100", "26101", "26102", "26103", "26104", "26105", "26106", "26107", "26108", "26109", "26110", "26111"]
+    },
+    {
+      "id": "osaka",
+      "label": "大阪市",
+      "regionLabel": "近畿",
+      "prefectureLabel": "大阪府",
+      "municipalityIdList": ["27100", "27102", "27103", "27104", "27106", "27107", "27108", "27109", "27111", "27113", "27114", "27115", "27116", "27117", "27118", "27119", "27120", "27121", "27122", "27123", "27124", "27125", "27126", "27127", "27128"]
+    },
+    {
+      "id": "sakai",
+      "label": "堺市",
+      "regionLabel": "近畿",
+      "prefectureLabel": "大阪府",
+      "municipalityIdList": ["27140", "27141", "27142", "27143", "27144", "27145", "27146", "27147"]
+    },
+    {
+      "id": "kobe",
+      "label": "神戸市",
+      "regionLabel": "近畿",
+      "prefectureLabel": "兵庫県",
+      "municipalityIdList": ["28100", "28101", "28102", "28105", "28106", "28107", "28108", "28109", "28110", "28111"]
+    },
+    {
+      "id": "okayama",
+      "label": "岡山市",
+      "regionLabel": "中国・四国",
+      "prefectureLabel": "岡山県",
+      "municipalityIdList": ["33100", "33101", "33102", "33103", "33104"]
+    },
+    {
+      "id": "hiroshima",
+      "label": "広島市",
+      "regionLabel": "中国・四国",
+      "prefectureLabel": "広島県",
+      "municipalityIdList": ["34100", "34101", "34102", "34103", "34104", "34105", "34106", "34107", "34108"]
+    },
+    {
+      "id": "kitakyushu",
+      "label": "北九州市",
+      "regionLabel": "九州",
+      "prefectureLabel": "福岡県",
+      "municipalityIdList": ["40100", "40101", "40103", "40105", "40106", "40107", "40108", "40109"]
+    },
+    {
+      "id": "fukuoka",
+      "label": "福岡市",
+      "regionLabel": "九州",
+      "prefectureLabel": "福岡県",
+      "municipalityIdList": ["40130", "40131", "40132", "40133", "40134", "40135", "40136", "40137"]
+    },
+    {
+      "id": "kumamoto",
+      "label": "熊本市",
+      "regionLabel": "九州",
+      "prefectureLabel": "熊本県",
+      "municipalityIdList": ["43100", "43101", "43102", "43103", "43104", "43105"]
+    }
+  ]
+}

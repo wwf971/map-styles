@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "municipalityId": "02208",
+      "searchText": "陸奥市"
+    },
+    {
+      "municipalityId": "02209",
+      "searchText": "津軽市"
+    },
+    {
+      "municipalityId": "11100",
+      "searchText": "埼玉市"
+    },
+    {
+      "municipalityId": "07204",
+      "searchText": "磐城市 岩城市 石城市"
+    },
+    {
+      "municipalityId": "08220",
+      "searchText": "筑波市"
+    },
+    {
+      "municipalityId": "08235",
+      "searchText": "筑波未来市"
+    },
+    {
+      "municipalityId": "08221",
+      "searchText": "常陸那珂市"
+    },
+    {
+      "municipalityId": "37207",
+      "searchText": "東香川市"
+    },
+    {
+      "municipalityId": "46220",
+      "searchText": "南薩摩市"
+    },
+    {
+      "municipalityId": "47213",
+      "searchText": "宇流麻市"
+    },
+    {
+      "municipalityId": "01395",
+      "searchText": "二世古町"
+    },
+    {
+      "municipalityId": "45209",
+      "searchText": "蝦野市"
+    },
+    {
+      "municipalityId": "02412",
+      "searchText": "奥入瀬町"
+    },
+    {
+      "municipalityId": "01586",
+      "searchText": "鵡川町"
+    },
+    {
+      "municipalityId": "01609",
+      "searchText": "襟裳町"
+    }
+  ]
+}

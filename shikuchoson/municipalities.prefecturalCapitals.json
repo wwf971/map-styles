@@ -1,0 +1,335 @@
+{
+  "id": "prefectural-capital",
+  "label": "県庁所在地",
+  "items": [
+    {
+      "id": "hokkaido-sapporo",
+      "label": "札幌市",
+      "regionLabel": "北海道・東北",
+      "prefectureLabel": "北海道",
+      "municipalityIdList": ["01100", "01101", "01102", "01103", "01104", "01105", "01106", "01107", "01108", "01109", "01110"]
+    },
+    {
+      "id": "aomori-aomori",
+      "label": "青森市",
+      "regionLabel": "北海道・東北",
+      "prefectureLabel": "青森県",
+      "municipalityIdList": ["02201"]
+    },
+    {
+      "id": "iwate-morioka",
+      "label": "盛岡市",
+      "regionLabel": "北海道・東北",
+      "prefectureLabel": "岩手県",
+      "municipalityIdList": ["03201"]
+    },
+    {
+      "id": "miyagi-sendai",
+      "label": "仙台市",
+      "regionLabel": "北海道・東北",
+      "prefectureLabel": "宮城県",
+      "municipalityIdList": ["04100", "04101", "04102", "04103", "04104", "04105"]
+    },
+    {
+      "id": "akita-akita",
+      "label": "秋田市",
+      "regionLabel": "北海道・東北",
+      "prefectureLabel": "秋田県",
+      "municipalityIdList": ["05201"]
+    },
+    {
+      "id": "yamagata-yamagata",
+      "label": "山形市",
+      "regionLabel": "北海道・東北",
+      "prefectureLabel": "山形県",
+      "municipalityIdList": ["06201"]
+    },
+    {
+      "id": "fukushima-fukushima",
+      "label": "福島市",
+      "regionLabel": "北海道・東北",
+      "prefectureLabel": "福島県",
+      "municipalityIdList": ["07201"]
+    },
+    {
+      "id": "ibaraki-mito",
+      "label": "水戸市",
+      "regionLabel": "関東",
+      "prefectureLabel": "茨城県",
+      "municipalityIdList": ["08201"]
+    },
+    {
+      "id": "tochigi-utsunomiya",
+      "label": "宇都宮市",
+      "regionLabel": "関東",
+      "prefectureLabel": "栃木県",
+      "municipalityIdList": ["09201"]
+    },
+    {
+      "id": "gunma-maebashi",
+      "label": "前橋市",
+      "regionLabel": "関東",
+      "prefectureLabel": "群馬県",
+      "municipalityIdList": ["10201"]
+    },
+    {
+      "id": "saitama-saitama",
+      "label": "さいたま市",
+      "regionLabel": "関東",
+      "prefectureLabel": "埼玉県",
+      "municipalityIdList": ["11100", "11101", "11102", "11103", "11104", "11105", "11106", "11107", "11108", "11109", "11110"]
+    },
+    {
+      "id": "chiba-chiba",
+      "label": "千葉市",
+      "regionLabel": "関東",
+      "prefectureLabel": "千葉県",
+      "municipalityIdList": ["12100", "12101", "12102", "12103", "12104", "12105", "12106"]
+    },
+    {
+      "id": "tokyo-shinjuku",
+      "label": "新宿区",
+      "regionLabel": "関東",
+      "prefectureLabel": "東京都",
+      "municipalityIdList": ["13104"]
+    },
+    {
+      "id": "kanagawa-yokohama",
+      "label": "横浜市",
+      "regionLabel": "関東",
+      "prefectureLabel": "神奈川県",
+      "municipalityIdList": ["14100", "14101", "14102", "14103", "14104", "14105", "14106", "14107", "14108", "14109", "14110", "14111", "14112", "14113", "14114", "14115", "14116", "14117", "14118"]
+    },
+    {
+      "id": "niigata-niigata",
+      "label": "新潟市",
+      "regionLabel": "甲信越・東海",
+      "prefectureLabel": "新潟県",
+      "municipalityIdList": ["15100", "15101", "15102", "15103", "15104", "15105", "15106", "15107", "15108"]
+    },
+    {
+      "id": "toyama-toyama",
+      "label": "富山市",
+      "regionLabel": "甲信越・東海",
+      "prefectureLabel": "富山県",
+      "municipalityIdList": ["16201"]
+    },
+    {
+      "id": "ishikawa-kanazawa",
+      "label": "金沢市",
+      "regionLabel": "甲信越・東海",
+      "prefectureLabel": "石川県",
+      "municipalityIdList": ["17201"]
+    },
+    {
+      "id": "fukui-fukui",
+      "label": "福井市",
+      "regionLabel": "甲信越・東海",
+      "prefectureLabel": "福井県",
+      "municipalityIdList": ["18201"]
+    },
+    {
+      "id": "yamanashi-kofu",
+      "label": "甲府市",
+      "regionLabel": "甲信越・東海",
+      "prefectureLabel": "山梨県",
+      "municipalityIdList": ["19201"]
+    },
+    {
+      "id": "nagano-nagano",
+      "label": "長野市",
+      "regionLabel": "甲信越・東海",
+      "prefectureLabel": "長野県",
+      "municipalityIdList": ["20201"]
+    },
+    {
+      "id": "gifu-gifu",
+      "label": "岐阜市",
+      "regionLabel": "甲信越・東海",
+      "prefectureLabel": "岐阜県",
+      "municipalityIdList": ["21201"]
+    },
+    {
+      "id": "shizuoka-shizuoka",
+      "label": "静岡市",
+      "regionLabel": "甲信越・東海",
+      "prefectureLabel": "静岡県",
+      "municipalityIdList": ["22100", "22101", "22102", "22103"]
+    },
+    {
+      "id": "aichi-nagoya",
+      "label": "名古屋市",
+      "regionLabel": "甲信越・東海",
+      "prefectureLabel": "愛知県",
+      "municipalityIdList": ["23100", "23101", "23102", "23103", "23104", "23105", "23106", "23107", "23108", "23109", "23110", "23111", "23112", "23113", "23114", "23115", "23116"]
+    },
+    {
+      "id": "mie-tsu",
+      "label": "津市",
+      "regionLabel": "甲信越・東海",
+      "prefectureLabel": "三重県",
+      "municipalityIdList": ["24201"]
+    },
+    {
+      "id": "shiga-otsu",
+      "label": "大津市",
+      "regionLabel": "近畿",
+      "prefectureLabel": "滋賀県",
+      "municipalityIdList": ["25201"]
+    },
+    {
+      "id": "kyoto-kyoto",
+      "label": "京都市",
+      "regionLabel": "近畿",
+      "prefectureLabel": "京都府",
+      "municipalityIdList": ["26100", "26101", "26102", "26103", "26104", "26105", "26106", "26107", "26108", "26109", "26110", "26111"]
+    },
+    {
+      "id": "osaka-osaka",
+      "label": "大阪市",
+      "regionLabel": "近畿",
+      "prefectureLabel": "大阪府",
+      "municipalityIdList": ["27100", "27102", "27103", "27104", "27106", "27107", "27108", "27109", "27111", "27113", "27114", "27115", "27116", "27117", "27118", "27119", "27120", "27121", "27122", "27123", "27124", "27125", "27126", "27127", "27128"]
+    },
+    {
+      "id": "hyogo-kobe",
+      "label": "神戸市",
+      "regionLabel": "近畿",
+      "prefectureLabel": "兵庫県",
+      "municipalityIdList": ["28100", "28101", "28102", "28105", "28106", "28107", "28108", "28109", "28110", "28111"]
+    },
+    {
+      "id": "nara-nara",
+      "label": "奈良市",
+      "regionLabel": "近畿",
+      "prefectureLabel": "奈良県",
+      "municipalityIdList": ["29201"]
+    },
+    {
+      "id": "wakayama-wakayama",
+      "label": "和歌山市",
+      "regionLabel": "近畿",
+      "prefectureLabel": "和歌山県",
+      "municipalityIdList": ["30201"]
+    },
+    {
+      "id": "tottori-tottori",
+      "label": "鳥取市",
+      "regionLabel": "中国・四国",
+      "prefectureLabel": "鳥取県",
+      "municipalityIdList": ["31201"]
+    },
+    {
+      "id": "shimane-matsue",
+      "label": "松江市",
+      "regionLabel": "中国・四国",
+      "prefectureLabel": "島根県",
+      "municipalityIdList": ["32201"]
+    },
+    {
+      "id": "okayama-okayama",
+      "label": "岡山市",
+      "regionLabel": "中国・四国",
+      "prefectureLabel": "岡山県",
+      "municipalityIdList": ["33100", "33101", "33102", "33103", "33104"]
+    },
+    {
+      "id": "hiroshima-hiroshima",
+      "label": "広島市",
+      "regionLabel": "中国・四国",
+      "prefectureLabel": "広島県",
+      "municipalityIdList": ["34100", "34101", "34102", "34103", "34104", "34105", "34106", "34107", "34108"]
+    },
+    {
+      "id": "yamaguchi-yamaguchi",
+      "label": "山口市",
+      "regionLabel": "中国・四国",
+      "prefectureLabel": "山口県",
+      "municipalityIdList": ["35203"]
+    },
+    {
+      "id": "tokushima-tokushima",
+      "label": "徳島市",
+      "regionLabel": "中国・四国",
+      "prefectureLabel": "徳島県",
+      "municipalityIdList": ["36201"]
+    },
+    {
+      "id": "kagawa-takamatsu",
+      "label": "高松市",
+      "regionLabel": "中国・四国",
+      "prefectureLabel": "香川県",
+      "municipalityIdList": ["37201"]
+    },
+    {
+      "id": "ehime-matsuyama",
+      "label": "松山市",
+      "regionLabel": "中国・四国",
+      "prefectureLabel": "愛媛県",
+      "municipalityIdList": ["38201"]
+    },
+    {
+      "id": "kochi-kochi",
+      "label": "高知市",
+      "regionLabel": "中国・四国",
+      "prefectureLabel": "高知県",
+      "municipalityIdList": ["39201"]
+    },
+    {
+      "id": "fukuoka-fukuoka",
+      "label": "福岡市",
+      "regionLabel": "九州",
+      "prefectureLabel": "福岡県",
+      "municipalityIdList": ["40130", "40131", "40132", "40133", "40134", "40135", "40136", "40137"]
+    },
+    {
+      "id": "saga-saga",
+      "label": "佐賀市",
+      "regionLabel": "九州",
+      "prefectureLabel": "佐賀県",
+      "municipalityIdList": ["41201"]
+    },
+    {
+      "id": "nagasaki-nagasaki",
+      "label": "長崎市",
+      "regionLabel": "九州",
+      "prefectureLabel": "長崎県",
+      "municipalityIdList": ["42201"]
+    },
+    {
+      "id": "kumamoto-kumamoto",
+      "label": "熊本市",
+      "regionLabel": "九州",
+      "prefectureLabel": "熊本県",
+      "municipalityIdList": ["43100", "43101", "43102", "43103", "43104", "43105"]
+    },
+    {
+      "id": "oita-oita",
+      "label": "大分市",
+      "regionLabel": "九州",
+      "prefectureLabel": "大分県",
+      "municipalityIdList": ["44201"]
+    },
+    {
+      "id": "miyazaki-miyazaki",
+      "label": "宮崎市",
+      "regionLabel": "九州",
+      "prefectureLabel": "宮崎県",
+      "municipalityIdList": ["45201"]
+    },
+    {
+      "id": "kagoshima-kagoshima",
+      "label": "鹿児島市",
+      "regionLabel": "九州",
+      "prefectureLabel": "鹿児島県",
+      "municipalityIdList": ["46201"]
+    },
+    {
+      "id": "okinawa-naha",
+      "label": "那覇市",
+      "regionLabel": "九州",
+      "prefectureLabel": "沖縄県",
+      "municipalityIdList": ["47201"]
+    }
+  ]
+}
