@@ -1,0 +1,73 @@
+# The types of the package map-styles (react-doc: main/doc_page_impl_type.md#declaring-a-type):
+# every doc page of a workspace importing the package has them. design: doc/README.md
+typeList:
+  # block maps (doc/map-block.md): one asset per map, its text the json of the map
+  - id: map-block.map-set
+    label: Block maps
+    description: maps of blocks on a grid of cells, rectangles and polygons in groups, edited in place and used as selectors
+    icon: map
+    kindList:
+      # a map (MapBlockData.ts, MapBlockData): its grid and its components, blocks and groups, each with
+      # a shape. registered as map-block.map-set.map, so another type may hold maps; its shape is checked
+      # on every write (react-doc: main/doc_page_impl_type.md#kinds-of-data-items)
+      - id: map
+        label: Map
+        content:
+          form: data
+          langList: [json]
+          schema:
+            type: object
+            required: [compList]
+            properties:
+              formatVersion: { type: integer }
+              label: { type: string }
+              grid:
+                type: object
+                properties:
+                  rowStart: { type: integer }
+                  rowEnd: { type: integer }
+                  colStart: { type: integer }
+                  colEnd: { type: integer }
+              compList:
+                type: array
+                items:
+                  type: object
+                  required: [id, kind, shape]
+                  properties:
+                    id: { type: string }
+                    label: { type: string }
+                    kind: { enum: [block, group] }
+                    shape: { type: object, required: [type], properties: { type: { enum: [rect, polygon] } } }
+                    childIdList: { type: array, items: { type: string } }
+        groupPath: map
+    # where the maps lie (doc/map-block.md#partitions): the maps of the package and its
+    # demonstrations, tracked; what is tried out, kept out of git with its item list
+    partitionList:
+      - { id: example, label: Example, description: the maps of the demonstration, isDefault: true }
+      - { id: playground, label: Playground, description: "maps tried out, kept out of git", isGitIgnored: true }
+    modeList:
+      - id: editor
+        label: Editor
+        description: the maps of a partition and the one shown in the editor (display, select, edit); param partition, map
+        comp: MapBlockEditor
+        category: edit
+        isDefault: true
+      - id: view
+        label: Map
+        description: one map in the flow of the document, to look at or to select in; param map, interaction (select, display)
+        comp: MapBlockView
+        pathParam: map
+  # the selection of Japanese areas (doc/shikuchoson.md): its map of the prefectures is a block
+  # map of the object, so the modes of block maps are its too
+  - id: shikuchoson.jp
+    label: Japanese area selector
+    description: regions, prefectures and municipalities of Japan selected together; the prefectures also on a tile map
+    icon: map-pin
+    # its kinds and partitions are those of block maps, its parent
+    extendList: [map-block.map-set]
+    modeList:
+      - id: selector
+        label: Selector
+        description: the region, prefecture and municipality selectors working together; param map (the map of the prefectures)
+        comp: ShikuchosonSelector
+        isDefault: true

@@ -1,0 +1,25 @@
+itemId: w65il1p4e53
+name: ""
+lang: json
+contentType: application/json
+fileExt: json
+owner:
+  ref: frontend:w65il1ops1t
+saveMode: newVersion
+versionIdHead: w65il1p4rwj
+isDeleted: false
+isLocked: false
+timeCreated: 20261116_03592109+09
+versionList:
+  - versionId: w65il1p4rwj
+    versionIdPrevList: []
+    time: 20261116_03592109+09
+    note: "converted to format v2 from map-block/config/prefectureTileGridMapJp.ts, the map the prefecture selector used"
+    size: 7650
+    hash: a7e9493e9aca4de65f85bde4f82cf4a954f8cd3e
+    isLocked: false
+    dependencyList: []
+eventList:
+  - eventType: create
+    time: 20261116_03592109+09
+    versionId: w65il1p4rwj

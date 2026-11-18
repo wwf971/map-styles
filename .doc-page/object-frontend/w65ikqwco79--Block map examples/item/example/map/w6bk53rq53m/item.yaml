@@ -1,0 +1,24 @@
+itemId: w6bk53rq53m
+name: ""
+lang: json
+contentType: application/json
+fileExt: json
+owner:
+  ref: frontend:w65ikqwco79
+versionIdHead: w6bk53rq60e
+isDeleted: false
+isLocked: false
+timeCreated: 20261119_04150337+09
+versionList:
+  - versionId: w6bk53rq60e
+    versionIdPrevList: []
+    time: 20261119_04150337+09
+    note: map of the frontend object Block map examples
+    size: 13220
+    hash: a0a35fb5aefe937c7144bce140ab252adb268fa3
+    isLocked: false
+    dependencyList: []
+eventList:
+  - eventType: create
+    time: 20261119_04150337+09
+    versionId: w6bk53rq60e

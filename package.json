@@ -1,0 +1,19 @@
+{
+  "name": "@wwf971/react-doc-package-map-styles",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A react-doc package (doc-package.yaml is its config). Not an npm package; this file marks its .js modules as ES modules for node (tests) and names what its components import.",
+  "scripts": {
+    "test": "node --import tsx --test comp-mdx/map-block/MapBlockGeom.test.ts comp-mdx/map-block/MapBlockData.test.ts comp-mdx/map-block/MapBlockStore.test.ts"
+  },
+  "dependencies": {
+    "@wwf971/react-comp-misc": "*",
+    "mobx": "^6.13.0",
+    "mobx-react-lite": "^4.1.0",
+    "rbush": "^4.0.1"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0"
+  }
+}

@@ -1,0 +1,29 @@
+# The side panel of the package's doc page: the demonstrations first, the design documents below.
+sidePanelById:
+  main:
+    tree:
+      - id: map-styles
+        text: map-styles
+        doc: ~map-styles/doc/README.md
+        defaultOpen: true
+        children:
+          - id: map-block
+            text: Block maps
+            doc: ~map-styles/comp-mdx/map-block/comp-map-block.md
+            defaultOpen: true
+            children:
+              - doc: ~map-styles/doc/map-block.md
+              - doc: ~map-styles/doc/map-block-data.md
+              - doc: ~map-styles/doc/map-block-select.md
+              - doc: ~map-styles/doc/map-block-edit.md
+          - id: shikuchoson
+            text: Japanese areas
+            doc: ~map-styles/comp-mdx/shikuchoson/comp-shikuchoson.md
+            defaultOpen: true
+            children:
+              - doc: ~map-styles/doc/shikuchoson.md
+          # the playground: a document git ignores, made from .doc-page/playground/map-block.md; its
+          # item stays while the document does not exist, and opens a page offering to create it
+          - id: map-block-playground
+            text: Playground
+            doc: ~map-styles/doc/map-block.playground.md

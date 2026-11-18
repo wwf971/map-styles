@@ -1,0 +1,19 @@
+# The documents of the package are in doc/ and beside the components (comp-mdx/*/comp-*.md); the
+# root is the package folder, as a doc page's is, so that .doc-page/object-frontend is named by it.
+rules:
+  - action: addFolder
+    alias: map-styles
+    path: ..
+    collect: recursive
+    exclude:
+      - doc-package.yaml
+      - type.yaml
+      - package.json
+      - .gitignore
+      - .DS_Store
+      - temp.md
+      # the repository's README, for GitHub; the package's own is doc/README.md
+      - /README.md
+      # the scripts of the data and of the build, not documents
+      - script-data/
+      - script-build/

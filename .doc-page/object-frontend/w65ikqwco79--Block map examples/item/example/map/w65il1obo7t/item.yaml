@@ -1,0 +1,25 @@
+itemId: w65il1obo7t
+name: ""
+lang: json
+contentType: application/json
+fileExt: json
+owner:
+  ref: frontend:w65ikqwco79
+saveMode: newVersion
+versionIdHead: w65il1obumf
+isDeleted: false
+isLocked: false
+timeCreated: 20261116_03592107+09
+versionList:
+  - versionId: w65il1obumf
+    versionIdPrevList: []
+    time: 20261116_03592107+09
+    note: the map of the demonstration
+    size: 1363
+    hash: ab24a1c984f5b38bba689d46d57ebec3c8b36814
+    isLocked: false
+    dependencyList: []
+eventList:
+  - eventType: create
+    time: 20261116_03592107+09
+    versionId: w65il1obumf

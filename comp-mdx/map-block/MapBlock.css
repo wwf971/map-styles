@@ -1,0 +1,1377 @@
+.map-block-shell {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 12px;
+  container: map-block-shell / inline-size;
+}
+
+.map-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.map-block-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  min-width: 0;
+  gap: 8px;
+  align-items: start;
+}
+
+.map-block-workspace-display,
+.map-block-workspace-select {
+  grid-template-columns: minmax(0, var(--map-block-map-width-max, 620px)) 300px;
+  justify-content: center;
+}
+
+.map-block-preview-panel {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.map-block-config-panel {
+  min-width: 0;
+  max-height: calc(100vh - 140px);
+  overflow: auto;
+  border-left: 1px solid #cbd5e1;
+  padding-left: 12px;
+}
+
+.map-block-config-title {
+  margin-bottom: 8px;
+  color: #223044;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.map-block-header {
+  flex: 0 0 auto;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 0;
+  align-items: flex-end;
+  gap: 16px;
+  justify-content: space-between;
+  padding-bottom: 0;
+  border-bottom: 1px solid #cbd5e1;
+  background: transparent;
+  box-shadow: none;
+}
+
+.map-block-header-main {
+  display: flex;
+  min-width: 0;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.map-block-header-title {
+  min-width: 0;
+  padding-bottom: 6px;
+}
+
+.map-block-header-title .eyebrow {
+  margin-bottom: 4px;
+}
+
+.map-block-header-title h2 {
+  margin: 0;
+  color: #132238;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.map-block-mode-control {
+  flex: 0 0 auto;
+  min-width: 240px;
+}
+
+.map-block-mode-control .segmented-control-track {
+  width: 100%;
+}
+
+.map-block-json-format-control {
+  min-height: 28px;
+}
+
+.map-block-header-controls {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-left: auto;
+  padding-bottom: 6px;
+}
+
+.map-block-clear,
+.map-block-header-button,
+.map-block-map-component {
+  border: 1px solid transparent;
+  font: inherit;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease, box-shadow 120ms ease, transform 120ms ease;
+}
+
+.map-block-clear {
+  min-height: 30px;
+  padding: 4px 10px;
+  border-color: #cfd7df;
+  border-radius: 4px;
+  background: #f7fafc;
+  color: #223044;
+  font-size: 13px;
+  line-height: 1.25;
+}
+
+.map-block-header-button {
+  min-height: 28px;
+  padding: 3px 10px;
+  border-color: #cfd7df;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #223044;
+  font-size: 13px;
+  line-height: 1.25;
+}
+
+.map-block-header-button:hover {
+  border-color: #526070;
+  background: #eef3f8;
+}
+
+.map-block-clear:hover,
+.map-block-map-component:hover {
+  border-color: #526070;
+  box-shadow: 0 1px 5px rgb(31 41 55 / 16%);
+}
+
+.map-block-map.is-multi-selecting .map-block-map-component {
+  pointer-events: none;
+}
+
+.map-block-map.is-multi-selecting .map-block-map-component:hover {
+  border-color: #ffffff;
+  box-shadow: none;
+}
+
+.map-block-map {
+  position: relative;
+  width: 100%;
+  min-width: 300px;
+  border: 1px solid #d5dde6;
+  border-radius: 6px;
+  background: #fbfcfe;
+  overflow: hidden;
+  /* the labels are part of the drawing: a drag over the map (a box, a move) never selects text */
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.map-block-map-frame {
+  position: relative;
+  width: 100%;
+  max-width: var(--map-block-map-width-max, 980px);
+  min-width: 300px;
+  margin-inline: auto;
+}
+
+.map-block-map-frame.is-edit-mode {
+  box-sizing: border-box;
+  width: min(100%, 1040px);
+  padding-top: 34px;
+  padding-left: 44px;
+}
+
+.map-block-map-frame .map-block-map {
+  width: 100%;
+}
+
+.map-block-range-controls {
+  position: absolute;
+  inset: 0;
+  z-index: 60;
+  color: #223044;
+  pointer-events: none;
+}
+
+.map-block-range-axis {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  pointer-events: auto;
+}
+
+.map-block-range-axis-horizontal {
+  top: 0;
+  left: 44px;
+  width: calc(100% - 44px);
+  max-width: 980px;
+  height: 28px;
+}
+
+.map-block-range-axis-vertical {
+  top: 34px;
+  left: 0;
+  width: 38px;
+  height: calc(100% - 34px);
+  flex-direction: column;
+}
+
+.map-block-range-symbol {
+  position: relative;
+  flex: 1 1 auto;
+  border-color: #526070;
+  pointer-events: none;
+}
+
+.map-block-range-symbol::before {
+  position: absolute;
+  background: #526070;
+  content: '';
+}
+
+.map-block-range-symbol-horizontal {
+  min-width: 40px;
+  height: 13px;
+  border-right: 2px solid #526070;
+  border-left: 2px solid #526070;
+}
+
+.map-block-range-symbol-horizontal::before {
+  top: 50%;
+  right: 0;
+  left: 0;
+  height: 2px;
+  transform: translateY(-50%);
+}
+
+.map-block-range-symbol-vertical {
+  width: 13px;
+  min-height: 40px;
+  border-top: 2px solid #526070;
+  border-bottom: 2px solid #526070;
+}
+
+.map-block-range-symbol-vertical::before {
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+}
+
+.map-block-map.is-edit-mode {
+  background: #f8fafc;
+}
+
+.map-block-grid-lines {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-image:
+    linear-gradient(to right, rgb(100 116 139 / 18%) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(100 116 139 / 18%) 1px, transparent 1px);
+  background-size: calc(100% / var(--tile-grid-cols)) calc(100% / var(--tile-grid-rows));
+  pointer-events: none;
+}
+
+.map-block-map-component {
+  position: absolute;
+  z-index: 2;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  border-color: #ffffff;
+  border-radius: 3px;
+  color: #172033;
+  font-size: clamp(10px, 1.2vw, 14px);
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.map-block-map-component:disabled {
+  cursor: default;
+}
+
+.map-block-map-component.is-disabled {
+  opacity: 0.42;
+  filter: saturate(0.25);
+}
+
+.map-block-map-component.is-disabled:hover {
+  border-color: #ffffff;
+  box-shadow: none;
+}
+
+.map-block-map-component span {
+  position: relative;
+  z-index: 2;
+  display: block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.map-block-map-component.is-edit-selected {
+  z-index: 30;
+  cursor: move;
+}
+
+.map-block-map-component.is-edit-multi-selected {
+  z-index: 28;
+  border-color: #1d4ed8;
+  box-shadow: inset 0 0 0 2px #1d4ed8, 0 1px 6px rgb(29 78 216 / 20%);
+  cursor: move;
+}
+
+.map-block-render-block {
+  border-color: #ffffff;
+}
+
+.map-block-render-group {
+  border-color: #9aa8b7;
+  border-style: dashed;
+  color: #172033;
+  font-size: clamp(10px, 1vw, 13px);
+  font-weight: 800;
+}
+
+.map-block-map-component.is-selected-final {
+  z-index: 8;
+  border-color: #ffffff;
+}
+
+.map-block-map-component.is-selected-final::before {
+  position: absolute;
+  inset: 1px;
+  z-index: 0;
+  border: 2px solid #64748b;
+  border-radius: 2px;
+  outline: 1px solid rgba(255, 255, 255, 0.94);
+  outline-offset: -4px;
+  content: '';
+  pointer-events: none;
+}
+
+.map-block-render-group.is-selected-final {
+  border-style: solid;
+}
+
+.map-block-map-component.is-selected-direct::after {
+  position: absolute;
+  z-index: 1;
+  right: 3px;
+  bottom: 3px;
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  border: 1px solid #ffffff;
+  background: #64748b;
+  content: '';
+}
+
+.map-block-edit-outline {
+  position: absolute;
+  z-index: 40;
+  pointer-events: none;
+}
+
+.map-block-edit-outline::before {
+  position: absolute;
+  inset: -0.5px;
+  border: 1px dashed #172033;
+  border-radius: 4px;
+  content: '';
+  pointer-events: none;
+}
+
+.map-block-edge-handle {
+  appearance: none;
+  position: absolute;
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  border: 1px solid #526070;
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 1px 4px rgb(15 23 42 / 22%);
+  pointer-events: auto;
+}
+
+.map-block-edge-handle::before {
+  position: absolute;
+  content: '';
+}
+
+.map-block-edge-handle-top,
+.map-block-edge-handle-bottom {
+  left: 20%;
+  width: 60%;
+  height: 5px;
+  cursor: ns-resize;
+}
+
+.map-block-edge-handle-top::before,
+.map-block-edge-handle-bottom::before {
+  inset: -5px 0;
+}
+
+.map-block-edge-handle-top {
+  top: -2.5px;
+}
+
+.map-block-edge-handle-bottom {
+  bottom: -2.5px;
+}
+
+.map-block-edge-handle-left,
+.map-block-edge-handle-right {
+  top: 20%;
+  width: 5px;
+  height: 60%;
+  cursor: ew-resize;
+}
+
+.map-block-edge-handle-left::before,
+.map-block-edge-handle-right::before {
+  inset: 0 -6px;
+}
+
+.map-block-edge-handle-left {
+  left: -2.5px;
+}
+
+.map-block-edge-handle-right {
+  right: -2.5px;
+}
+
+.map-block-drag-indicator {
+  position: absolute;
+  z-index: 45;
+  pointer-events: none;
+}
+
+.map-block-drag-indicator.is-valid {
+  background: #2563eb;
+}
+
+.map-block-drag-indicator.is-invalid {
+  background: #dc2626;
+}
+
+.map-block-drag-indicator.is-vertical {
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  transform: translateX(-1px);
+}
+
+.map-block-drag-indicator.is-horizontal {
+  right: 0;
+  left: 0;
+  height: 2px;
+  transform: translateY(-1px);
+}
+
+.map-block-selection-rectangle,
+.map-block-multi-move-bounding-box {
+  position: absolute;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.map-block-selection-rectangle {
+  z-index: 50;
+  border: 1px solid #2563eb;
+  background: rgb(37 99 235 / 14%);
+}
+
+.map-block-selection-rectangle.is-full-include {
+  border-color: #0f766e;
+  background: rgb(15 118 110 / 14%);
+}
+
+.map-block-multi-move-bounding-box {
+  z-index: 36;
+  border: 2px dashed #2563eb;
+  border-radius: 5px;
+  background: rgb(37 99 235 / 8%);
+}
+
+.map-block-multi-move-bounding-box.is-invalid {
+  border-color: #dc2626;
+  background: rgb(220 38 38 / 8%);
+}
+
+.map-block-color-teal {
+  background: #bceee0;
+}
+
+.map-block-color-yellow {
+  background: #f3e889;
+}
+
+.map-block-color-coral {
+  background: #f2a391;
+}
+
+.map-block-color-pink {
+  background: #ee8cad;
+}
+
+.map-block-color-violet {
+  background: #b994d1;
+}
+
+.map-block-color-indigo {
+  background: #8a91d9;
+}
+
+.map-block-status-row {
+  display: flex;
+  max-width: 980px;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.map-block-status {
+  display: grid;
+  flex: 1;
+  max-width: 980px;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid #d5dde6;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #364152;
+  font-size: 13px;
+}
+
+.map-block-status div {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 10px;
+}
+
+.map-block-status span {
+  color: #65758b;
+  font-weight: 700;
+}
+
+.map-block-status strong {
+  min-width: 0;
+  font-weight: 600;
+}
+
+.map-block-json-panel {
+  max-width: 980px;
+  border: 1px solid #d5dde6;
+  border-radius: 4px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.map-block-version-panel {
+  max-width: 980px;
+  border: 1px solid #d5dde6;
+  border-radius: 4px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.map-block-version-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 10px;
+  border-bottom: 1px solid #d5dde6;
+  background: #f7fafc;
+}
+
+.map-block-version-toolbar h2 {
+  margin: 0;
+  color: #223044;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.map-block-version-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.map-block-version-button {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 10px;
+  border: 1px solid #cfd7df;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #223044;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.map-block-version-button:disabled {
+  color: #94a3b8;
+  cursor: default;
+}
+
+.map-block-version-message {
+  padding: 7px 10px;
+  border-bottom: 1px solid #e5ebf2;
+  color: #526070;
+  font-size: 12px;
+}
+
+.map-block-version-panel .folder-view-container {
+  border: 0;
+  border-radius: 0;
+}
+
+.map-block-json-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 10px;
+  border-bottom: 1px solid #d5dde6;
+  background: #f7fafc;
+}
+
+.map-block-json-toolbar h2 {
+  margin: 0;
+  color: #223044;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.map-block-json-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.map-block-json-actions > [role='radiogroup'] {
+  min-height: 28px;
+}
+
+.map-block-json-actions > [role='radiogroup'] button {
+  min-height: 24px;
+}
+
+.map-block-icon-button,
+.map-block-copy-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  border: 1px solid #cfd7df;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #223044;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.map-block-icon-button {
+  width: 30px;
+  padding: 0;
+}
+
+.map-block-copy-button {
+  padding: 3px 10px;
+}
+
+.map-block-copy-message {
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.map-block-json-content {
+  flex: 1 1 auto;
+  min-height: 320px;
+  max-height: none;
+  margin: 0;
+  padding: 12px;
+  overflow-y: auto;
+  overflow-x: auto;
+  background: #ffffff;
+  color: #172033;
+  font-size: 12px;
+  line-height: 1.45;
+  white-space: pre;
+}
+
+/* The map keeps its width (620px by default) where the map and the config panel do not fit side by
+   side, as in the column of a document: the panel goes below the map, as the full-page original did
+   only in a window narrower than 760px. 928px = 620 (map) + 8 (gap) + 300 (panel). */
+@container map-block-shell (max-width: 927px) {
+  .map-block-workspace {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .map-block-workspace-display,
+  .map-block-workspace-select {
+    grid-template-columns: minmax(0, var(--map-block-map-width-max, 620px));
+  }
+
+  .map-block-config-panel {
+    max-height: none;
+    border-top: 1px solid #cbd5e1;
+    border-left: 0;
+    padding-top: 12px;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .map-block-status-row {
+    flex-direction: column;
+  }
+
+  .map-block-workspace {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .map-block-config-panel {
+    max-height: none;
+    border-top: 1px solid #cbd5e1;
+    border-left: 0;
+    padding-top: 12px;
+    padding-left: 0;
+  }
+
+  .map-block-status div {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}
+
+.map-block-move-ghost {
+  position: absolute;
+  z-index: 35;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  border: 1px solid #172033;
+  border-radius: 4px;
+  color: #172033;
+  font-size: clamp(10px, 1.2vw, 14px);
+  font-weight: 800;
+  line-height: 1.15;
+  text-align: center;
+  opacity: 0.62;
+  pointer-events: none;
+  box-shadow: 0 4px 14px rgb(15 23 42 / 20%);
+}
+
+.map-block-move-ghost span {
+  display: block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.map-block-dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgb(15 23 42 / 22%);
+}
+
+.map-block-dialog {
+  box-sizing: border-box;
+  width: min(360px, 100%);
+  padding: 14px;
+  border: 1px solid #d5dde6;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 0 16px 40px rgb(15 23 42 / 24%);
+}
+
+.map-block-json-dialog {
+  display: flex;
+  width: min(980px, 100%);
+  max-height: min(760px, calc(100vh - 40px));
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+}
+
+.map-block-dialog h2 {
+  margin: 0 0 10px;
+  color: #223044;
+  font-size: 15px;
+  line-height: 1.25;
+}
+
+.map-block-json-dialog .map-block-json-toolbar h2 {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.map-block-dialog-input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 34px;
+  padding: 5px 8px;
+  border: 1px solid #cfd7df;
+  border-radius: 4px;
+  color: #172033;
+  font: inherit;
+}
+
+.map-block-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.map-block-prop-editor-popup {
+  position: fixed;
+  z-index: 180;
+  box-sizing: border-box;
+  border: 1px solid #cfd7df;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 0 14px 36px rgb(15 23 42 / 22%);
+  overflow: hidden;
+}
+
+.map-block-prop-editor-title {
+  display: flex;
+  min-height: 30px;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between;
+  padding: 4px 7px 4px 10px;
+  border-bottom: 1px solid #d5dde6;
+  background: #f7fafc;
+  color: #223044;
+  cursor: move;
+  user-select: none;
+}
+
+.map-block-prop-editor-title-text {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 18px;
+}
+
+.map-block-prop-editor-close {
+  flex: 0 0 auto;
+  min-height: 24px;
+  padding: 2px 8px;
+  border: 1px solid #cfd7df;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #223044;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.map-block-prop-editor-close:hover {
+  border-color: #526070;
+  background: #eef3f8;
+}
+
+.map-block-prop-editor-popup .prop-editor-root {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+
+/* ---------- the editor: focus, toolbar, hints (MapBlockEditor.tsx) ---------- */
+
+.map-block-shell:focus,
+.map-block-map:focus {
+  outline: none;
+}
+
+.map-block-edit-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.map-block-edit-toolbar-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.map-block-edit-toolbar-label {
+  color: #526070;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.map-block-edit-toolbar-gap {
+  width: 8px;
+}
+
+.map-block-header-button:disabled {
+  cursor: default;
+  opacity: 0.45;
+}
+
+.map-block-header-button:disabled:hover {
+  border-color: #cfd7df;
+  background: #ffffff;
+}
+
+.map-block-edit-hint {
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.map-block-edit-ask {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border: 1px solid #f2c97d;
+  border-radius: 4px;
+  background: #fff8e8;
+  color: #5b4407;
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+
+.map-block-edit-message {
+  color: #526070;
+  font-size: 12.5px;
+}
+
+.map-block-edit-message.is-error {
+  color: #b42318;
+}
+
+/* the grid range fields of the vertical axis stand in a narrow column: their buttons go
+   above and below the value */
+.map-block-range-value {
+  display: flex;
+  justify-content: center;
+}
+
+.map-block-range-axis-vertical .num-value-row {
+  flex-direction: column;
+  gap: 2px;
+  cursor: ns-resize;
+}
+
+/* ---------- tools ---------- */
+
+.map-block-map.is-tool-rect,
+.map-block-map.is-tool-polygon,
+.map-block-map.is-tool-rect .map-block-map-component,
+.map-block-map.is-tool-polygon .map-block-map-component {
+  cursor: crosshair;
+}
+
+.map-block-rect-create-ghost {
+  position: absolute;
+  z-index: 50;
+  box-sizing: border-box;
+  border: 2px dashed #2563eb;
+  border-radius: 3px;
+  background: rgb(37 99 235 / 12%);
+  pointer-events: none;
+}
+
+/* ---------- polygon blocks (MapBlockRender.tsx): the button is cut to the polygon by
+   clip-path, which keeps the pointer inside it too; the border is an svg drawn over it ---------- */
+
+.map-block-map-component.is-shape-polygon,
+.map-block-map-component.is-shape-polygon:hover,
+.map-block-map-component.is-shape-polygon.is-selected-final,
+.map-block-map-component.is-shape-polygon.is-edit-multi-selected {
+  padding: 0;
+  border-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.map-block-map-component.is-shape-polygon::before,
+.map-block-map-component.is-shape-polygon::after {
+  display: none;
+}
+
+.map-block-map-component.is-shape-polygon .map-block-shape-label {
+  position: absolute;
+  z-index: 2;
+  max-width: 100%;
+  transform: translate(-50%, -50%);
+  overflow-wrap: anywhere;
+  pointer-events: none;
+}
+
+.map-block-shape-outline {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.map-block-shape-ring {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2px;
+}
+
+.map-block-render-group .map-block-shape-ring {
+  stroke: #9aa8b7;
+  stroke-dasharray: 4 3;
+}
+
+.map-block-render-group.is-selected-final .map-block-shape-ring {
+  stroke-dasharray: none;
+}
+
+.map-block-map-component.is-shape-polygon:hover .map-block-shape-ring {
+  stroke: #526070;
+}
+
+.map-block-shape-ring-selected {
+  fill: none;
+  stroke: #64748b;
+  stroke-width: 8px;
+}
+
+.map-block-map-component.is-shape-polygon.is-edit-multi-selected .map-block-shape-ring {
+  stroke: #1d4ed8;
+  stroke-width: 5px;
+}
+
+.map-block-shape-dot {
+  fill: #64748b;
+  stroke: #ffffff;
+  stroke-width: 1px;
+  vector-effect: non-scaling-stroke;
+}
+
+/* ---------- the selected polygon in the edit mode: corners, segments, middles ---------- */
+
+.map-block-polygon-edit,
+.map-block-polygon-draw {
+  position: absolute;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+}
+
+.map-block-polygon-edit-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.map-block-polygon-edit-outline {
+  fill: none;
+  stroke: #172033;
+  stroke-width: 1px;
+  stroke-dasharray: 4 3;
+}
+
+.map-block-polygon-edit.is-invalid .map-block-polygon-edit-outline {
+  stroke: #dc2626;
+  stroke-width: 2px;
+  stroke-dasharray: none;
+  fill: rgb(220 38 38 / 10%);
+}
+
+.map-block-polygon-edit.is-valid .map-block-polygon-edit-outline {
+  fill: rgb(37 99 235 / 6%);
+}
+
+.map-block-polygon-edit-segment {
+  stroke: transparent;
+  stroke-width: 10px;
+  pointer-events: stroke;
+}
+
+.map-block-polygon-edit-segment:hover {
+  stroke: rgb(37 99 235 / 35%);
+}
+
+.map-block-polygon-edit-segment.is-horizontal {
+  cursor: ns-resize;
+}
+
+.map-block-polygon-edit-segment.is-vertical {
+  cursor: ew-resize;
+}
+
+.map-block-polygon-edit-segment.is-slanted {
+  cursor: move;
+}
+
+.map-block-polygon-vertex-handle,
+.map-block-polygon-midpoint-handle,
+.map-block-polygon-draw-point,
+.map-block-polygon-draw-pointer {
+  position: absolute;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+}
+
+.map-block-polygon-vertex-handle {
+  width: 11px;
+  height: 11px;
+  border: 1.5px solid #526070;
+  border-radius: 2px;
+  background: #ffffff;
+  box-shadow: 0 1px 4px rgb(15 23 42 / 22%);
+  cursor: grab;
+  pointer-events: auto;
+}
+
+.map-block-polygon-vertex-handle:hover,
+.map-block-polygon-vertex-handle.is-dragged {
+  border-color: #1d4ed8;
+  background: #dbeafe;
+}
+
+.map-block-polygon-midpoint-handle {
+  width: 8px;
+  height: 8px;
+  border: 1px solid #94a3b8;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 85%);
+  cursor: copy;
+  pointer-events: auto;
+}
+
+.map-block-polygon-midpoint-handle:hover {
+  border-color: #1d4ed8;
+  background: #dbeafe;
+}
+
+/* ---------- the polygon being drawn ---------- */
+
+.map-block-polygon-draw-line {
+  fill: none;
+  stroke: #2563eb;
+  stroke-width: 2px;
+}
+
+.map-block-polygon-draw.is-invalid .map-block-polygon-draw-line {
+  stroke: #dc2626;
+}
+
+.map-block-polygon-draw-fill {
+  fill: rgb(37 99 235 / 10%);
+  stroke: none;
+}
+
+.map-block-polygon-draw-point {
+  width: 9px;
+  height: 9px;
+  border: 1.5px solid #2563eb;
+  border-radius: 999px;
+  background: #ffffff;
+}
+
+.map-block-polygon-draw-point.is-first {
+  width: 12px;
+  height: 12px;
+  border-width: 2px;
+}
+
+.map-block-polygon-draw-point.is-closing {
+  background: #2563eb;
+}
+
+.map-block-polygon-draw-pointer {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #2563eb;
+}
+
+/* ---------- a frontend object of maps: the block, the bar of its maps (MapBlockObjectEditor.jsx,
+   MapBlockMapBar.jsx) ---------- */
+
+.map-block-object-shell {
+  margin: 1rem 0 1.5rem;
+}
+
+.map-block-object-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.map-block-object-editor.is-popup {
+  height: 100%;
+  overflow: auto;
+  padding: 12px 16px;
+  box-sizing: border-box;
+}
+
+.map-block-map-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.map-block-map-bar-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+}
+
+.map-block-map-bar-title {
+  color: #223044;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.map-block-map-bar-partition {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.map-block-map-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.map-block-map-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 26px;
+  padding: 2px 10px;
+  border: 1px solid #cfd7df;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #223044;
+  font: inherit;
+  font-size: 12.5px;
+  cursor: pointer;
+}
+
+.map-block-map-chip:hover {
+  border-color: #526070;
+}
+
+.map-block-map-chip.is-selected {
+  border-color: #2d579e;
+  background: #e8effa;
+  color: #1d3f78;
+  font-weight: 700;
+}
+
+.map-block-map-chip-dirty {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #d97706;
+}
+
+.map-block-map-bar-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.map-block-map-bar-note {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.map-block-header-button.is-primary:not(:disabled) {
+  border-color: #2d579e;
+  background: #2d579e;
+  color: #ffffff;
+}
+
+.map-block-header-button.is-primary:not(:disabled):hover {
+  background: #244a88;
+}
+
+.map-block-save-state {
+  overflow: hidden;
+  color: #64748b;
+  font-size: 12px;
+  text-overflow: ellipsis;
+}
+
+.map-block-save-state.is-error {
+  color: #b42318;
+}
+
+.map-block-object-view {
+  margin: 1rem 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* a block in no group has no color of a group: a neutral one, below every color class and the
+   inline color of a group (:where adds nothing to the specificity) */
+:where(.map-block-map-component.map-block-render-block) {
+  background: #dfe6ee;
+}
+
+/* the state of the save keeps one width, so that the row does not wrap when it changes */
+.map-block-save-state {
+  display: inline-block;
+  min-width: 9.5em;
+  white-space: nowrap;
+}

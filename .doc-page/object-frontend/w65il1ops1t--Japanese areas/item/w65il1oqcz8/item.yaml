@@ -1,0 +1,25 @@
+itemId: w65il1oqcz8
+name: ""
+lang: yaml
+contentType: text/yaml
+fileExt: yaml
+owner:
+  ref: frontend:w65il1ops1t
+  role: entry
+versionIdHead: w65il1or5mf
+isDeleted: false
+isLocked: false
+timeCreated: 20261116_03592108+09
+versionList:
+  - versionId: w65il1or5mf
+    versionIdPrevList: []
+    time: 20261116_03592108+09
+    note: the entry of the frontend object Japanese areas
+    size: 189
+    hash: bb0fb2c553a5f83a4c5244130283178fa252a172
+    isLocked: false
+    dependencyList: []
+eventList:
+  - eventType: create
+    time: 20261116_03592108+09
+    versionId: w65il1or5mf

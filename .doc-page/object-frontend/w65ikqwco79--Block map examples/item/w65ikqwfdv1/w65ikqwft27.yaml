@@ -1,0 +1,4 @@
+name: Block map examples
+type: map-block.map-set
+description: "Block maps of the demonstration: rectangles, polygons and groups."
+metadata: {}

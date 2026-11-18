@@ -1,0 +1,8 @@
+# The playground documents of the package's doc page (react-doc: main/doc_page_impl_test.md): each
+# lives at `doc`, ignored by git, written from `template`, which is what git keeps.
+playgroundList:
+  - id: map-block
+    title: The block map playground
+    description: Maps of the partition playground, to draw, break and start over, without touching the example.
+    doc: ~map-styles/doc/map-block.playground.md
+    template: ./playground/map-block.md

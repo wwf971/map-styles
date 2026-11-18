@@ -1,0 +1,1627 @@
+.shikuchoson-tabs-panel > .tabs-on-top-container {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.shikuchoson-tabs-panel > .tabs-on-top-container > .tabs-on-top-content {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.shikuchoson-tabs-panel > .tabs-on-top-container > .tabs-on-top-content > .tab-panel.active {
+  height: 100%;
+}
+
+.shikuchoson-panel {
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+
+.shikuchoson-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  padding-top: 8px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.shikuchoson-selector-stack {
+  width: min(760px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.selector-block {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.selector-block-title {
+  min-height: 28px;
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  color: #31465f;
+}
+
+.selector-block-title-label {
+  flex: 0 0 5.5em;
+  min-width: 5.5em;
+  font-size: 19px;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.selected-summary-section {
+  width: min(720px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.selected-summary-divider {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  color: #31465f;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.selected-summary-divider::before,
+.selected-summary-divider::after {
+  content: '';
+  height: 1px;
+  background: #d5e0eb;
+}
+
+.selected-summary-divider span {
+  white-space: nowrap;
+}
+
+.selected-summary-panel {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 9px 10px 10px;
+  border: 1px solid #d5e0eb;
+  border-radius: 8px;
+  background: #f8fbfd;
+  color: #25384d;
+}
+
+.selected-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.selected-summary-group {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.selected-summary-group-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  color: #52647a;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.selected-summary-count {
+  min-width: 22px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: #e7eef6;
+  color: #29445c;
+  font-size: 11px;
+  line-height: 1;
+}
+
+.selected-summary-chip-list {
+  min-height: 29px;
+  max-height: 118px;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 4px;
+  padding: 5px;
+  border: 1px solid #e1e9f2;
+  border-radius: 7px;
+  background: #ffffff;
+  scrollbar-width: thin;
+}
+
+.selected-summary-chip {
+  max-width: 100%;
+  min-height: 24px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border: 1px solid #cbd8e6;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #24384e;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.15;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.selected-summary-chip.is-region-colored {
+  border-color: rgba(33, 54, 76, 0.18);
+  background: var(--selected-summary-chip-bg, #dbeafe);
+}
+
+.selected-summary-empty {
+  min-height: 24px;
+  display: inline-flex;
+  align-items: center;
+  color: #8190a1;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .selected-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .selected-summary-chip-list {
+    max-height: 92px;
+  }
+}
+
+.prefecture-filter-toggle {
+  width: fit-content;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #31465f;
+  font-size: 13px;
+}
+
+.municipality-selector {
+  position: relative;
+  width: min(720px, 100%);
+}
+
+.municipality-search-box {
+  min-height: 42px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  gap: 6px;
+  padding: 5px 5px 5px 8px;
+  border: 1px solid #aebed1;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(30, 41, 59, 0.08);
+}
+
+.municipality-search-box.is-wrap {
+  align-items: start;
+}
+
+.region-selector {
+  width: min(720px, 100%);
+  min-height: 42px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  gap: 6px;
+  padding: 5px 5px 5px 8px;
+  border: 1px solid #aebed1;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(30, 41, 59, 0.08);
+}
+
+.region-selector-chip-list {
+  position: relative;
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.region-selector-chip {
+  min-height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px;
+  border: 1px solid #c8d4e2;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #52647a;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.region-selector-chip:hover {
+  background: #f3f7fa;
+  border-color: #9eb4c9;
+  color: #29445c;
+}
+
+.region-selector-chip.active {
+  border-color: rgba(33, 54, 76, 0.28);
+  background: var(--region-selector-chip-bg, #dbeafe);
+  color: #172338;
+  box-shadow: inset 0 0 0 1px rgba(33, 54, 76, 0.12);
+}
+
+.region-selector-settings-button {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid #b9c8d8;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #29445c;
+  cursor: pointer;
+}
+
+.region-selector-settings-button:hover,
+.region-selector-settings-button:focus-visible {
+  border-color: #8da7bf;
+  background: #e8f0f6;
+  outline: none;
+}
+
+.shikuchoson-config-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  background: rgba(15, 23, 42, 0.18);
+}
+
+.shikuchoson-config-popup {
+  position: fixed;
+  width: min(360px, calc(100vw - 24px));
+  max-height: min(640px, calc(100vh - 96px));
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  border: 1px solid #c9d6e4;
+  border-radius: 8px;
+  background: #f8fafc;
+  box-shadow: 0 18px 42px rgba(15, 23, 42, 0.24);
+}
+
+.shikuchoson-config-popup-title {
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 7px 10px;
+  border-bottom: 1px solid #d9e2ec;
+  color: #26384f;
+  cursor: move;
+  font-size: 14px;
+  font-weight: 900;
+  user-select: none;
+}
+
+.shikuchoson-config-popup-close {
+  min-height: 26px;
+  padding: 3px 8px;
+  border: 1px solid #b9c8d8;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #29445c;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.shikuchoson-config-popup-close:hover,
+.shikuchoson-config-popup-close:focus-visible {
+  border-color: #8da7bf;
+  background: #e8f0f6;
+  outline: none;
+}
+
+.shikuchoson-config-popup .prop-editor-root {
+  min-height: 0;
+  border-radius: 0 0 8px 8px;
+}
+
+.shikuchoson-config-popup .prop-editor-main {
+  max-height: min(560px, calc(100vh - 152px));
+  overflow-y: auto;
+}
+
+.shikuchoson-config-popup .prop-editor-node-list {
+  padding: 8px;
+}
+
+.selector-title-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex: 0 0 auto;
+}
+
+.municipality-text-button.municipality-title-button {
+  min-height: 28px;
+  padding: 3px 9px;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1.1;
+}
+
+.municipality-tag-row-shell {
+  position: relative;
+  min-width: 0;
+  overflow: visible;
+}
+
+.municipality-tag-row {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  white-space: nowrap;
+}
+
+.municipality-tag-row.is-single {
+  flex-wrap: nowrap;
+}
+
+.municipality-tag-row.is-wrap {
+  min-height: 32px;
+  max-height: 132px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 0 4px;
+  white-space: normal;
+  scrollbar-width: thin;
+}
+
+.municipality-drag-scroll {
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  z-index: 5;
+  width: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #9db2c6;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.58);
+  color: #16354d;
+  cursor: pointer;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 800;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 2px 5px rgba(15, 23, 42, 0.1);
+}
+
+.municipality-drag-scroll:hover {
+  background: rgba(230, 240, 247, 0.72);
+  border-color: #6d8ba4;
+}
+
+.municipality-drag-scroll-left {
+  left: -46px;
+}
+
+.municipality-drag-scroll-right {
+  right: -46px;
+}
+
+.municipality-drag-cancel-drop {
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  z-index: 6;
+  width: 124px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+  border: 1px solid #d2a8a8;
+  border-radius: 6px;
+  background: #fff7f7;
+  color: #9f2f2f;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+  box-shadow: 0 1px 2px rgba(30, 41, 59, 0.08);
+  white-space: nowrap;
+}
+
+.municipality-drag-cancel-drop.is-single {
+  right: -174px;
+}
+
+.municipality-drag-cancel-drop.is-single.is-without-scroll-zones {
+  right: 4px;
+}
+
+.municipality-drag-cancel-drop.is-wrap {
+  right: -132px;
+  border-color: #9db2c6;
+  background: rgba(255, 255, 255, 0.58);
+  color: #9f2f2f;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 2px 5px rgba(15, 23, 42, 0.1);
+}
+
+.municipality-drag-cancel-drop:hover,
+.municipality-drag-cancel-drop:focus-visible {
+  border-color: #b85d5d;
+  background: #ffe9e9;
+  color: #7f1d1d;
+  outline: none;
+}
+
+.municipality-insert-line {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  z-index: 4;
+  width: 4px;
+  border-radius: 999px;
+  background: #55bfe8;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.9), 0 0 0 4px rgba(85, 191, 232, 0.22);
+  pointer-events: none;
+  transform: translateX(-2px);
+}
+
+.municipality-insert-line.is-cancel-drop-hover {
+  background: #d94a4a;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.92), 0 0 0 4px rgba(217, 74, 74, 0.26);
+}
+
+.municipality-insert-line.is-single {
+  width: 3px;
+  transform: translateX(0);
+}
+
+.municipality-insert-line.is-wrap {
+  top: auto;
+  bottom: auto;
+  z-index: 8;
+  width: 3px;
+  transform: translateX(-1px);
+}
+
+.municipality-tag-row::-webkit-scrollbar {
+  display: none;
+}
+
+.municipality-search-editor {
+  flex: 0 0 160px;
+  min-width: 80px;
+  min-height: 28px;
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 2px;
+  outline: none;
+  color: #1b2a3c;
+  font-size: 14px;
+}
+
+.municipality-tag-row.is-wrap .municipality-search-editor {
+  flex: 1 0 140px;
+}
+
+.municipality-search-editor:empty::before {
+  content: attr(data-placeholder);
+  color: #8b9aae;
+}
+
+.municipality-text-button,
+.municipality-tag-remove,
+.municipality-result-item,
+.municipality-kind-toggle,
+.municipality-special-filter-toggle,
+.municipality-filter-prefecture-tag,
+.municipality-filter-prefecture-remove,
+.municipality-filter-mode-toggle {
+  font: inherit;
+}
+
+.municipality-text-button {
+  min-height: 30px;
+  padding: 4px 8px;
+  border: 1px solid #b9c8d8;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #29445c;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.municipality-text-button:hover {
+  background: #e8f0f6;
+}
+
+.municipality-tag {
+  position: relative;
+  flex: 0 0 auto;
+  max-width: 220px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 3px 2px 3px 5px;
+  border: 1px solid #bfccd9;
+  border-radius: 6px;
+  background: #f5f8fb;
+  cursor: grab;
+}
+
+.municipality-tag.is-region-colored {
+  border-color: rgba(33, 54, 76, 0.24);
+  background: var(--municipality-tag-region-bg, #dbeafe);
+}
+
+.municipality-tag.is-region-colored .municipality-prefecture-badge {
+  border-color: rgba(33, 54, 76, 0.18);
+  background: rgba(255, 255, 255, 0.66);
+}
+
+.municipality-tag.is-region-colored .municipality-tag-remove:hover {
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.municipality-tag:active {
+  cursor: grabbing;
+}
+
+.municipality-tag.is-dragged {
+  opacity: 0.45;
+}
+
+.municipality-tag-text {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #21364c;
+  font-size: 13px;
+}
+
+.municipality-prefecture-badge {
+  flex: 0 0 auto;
+  width: 26px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(33, 54, 76, 0.18);
+  border-radius: 5px;
+  background: var(--prefecture-badge-bg, #dbeafe);
+  color: #172338;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+  overflow: hidden;
+}
+
+.municipality-prefecture-badge.is-long {
+  width: 34px;
+}
+
+.municipality-tag .municipality-prefecture-badge {
+  height: 21px;
+}
+
+.municipality-prefecture-badge-text {
+  display: inline-block;
+  transform: scaleX(0.74);
+  transform-origin: center;
+  white-space: nowrap;
+}
+
+.municipality-prefecture-badge.is-long .municipality-prefecture-badge-text {
+  transform: scaleX(0.68);
+}
+
+.municipality-tag-remove {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 20px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 2px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #52657c;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.municipality-tag-remove:hover {
+  background: #dfe8f0;
+  color: #102234;
+}
+
+.municipality-kind-icon {
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.municipality-kind-icon-city {
+  background: #277c7b;
+}
+
+.municipality-kind-icon-ward {
+  background: #4e6fae;
+}
+
+.municipality-kind-icon-town {
+  background: #8a6b2c;
+}
+
+.municipality-kind-icon-village {
+  background: #52743f;
+}
+
+.municipality-kind-icon-prefecture {
+  background: #8062a8;
+}
+
+.municipality-kind-icon.is-plain {
+  border: 1px solid #c8d2dc;
+  background: #eef2f6;
+  color: #34475c;
+}
+
+.municipality-match-highlight {
+  border-radius: 2px;
+  background: #ffec75;
+  color: inherit;
+  padding: 0 1px;
+}
+
+.municipality-match-highlight-badge {
+  border-radius: 2px;
+  background: rgba(255, 236, 117, 0.58);
+  color: inherit;
+  padding: 0 1px;
+}
+
+.municipality-dropdown {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  border: 1px solid #b6c4d3;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.16);
+  overflow: hidden;
+}
+
+.municipality-filter-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 4px;
+  padding: 4px 5px;
+  background: #f6f9fc;
+}
+
+.municipality-filter-row.is-wrap {
+  display: block;
+}
+
+.municipality-filter-row.is-wrap::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.municipality-selector > .municipality-filter-row {
+  margin-top: 0;
+  border: 1px solid #dbe3ed;
+  border-top: 0;
+  border-radius: 0 0 7px 7px;
+}
+
+.municipality-selector.has-filter-row .municipality-search-box {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.municipality-filter-content-shell {
+  position: relative;
+  z-index: 1;
+  justify-self: stretch;
+  grid-column: 1;
+  grid-row: 1;
+  min-width: 0;
+}
+
+.municipality-filter-row.is-single.is-dragging .municipality-filter-content-shell {
+  z-index: 4;
+}
+
+.municipality-filter-content {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  gap: 4px;
+}
+
+.municipality-filter-row.is-single .municipality-filter-content {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  white-space: nowrap;
+}
+
+.municipality-filter-row.is-single .municipality-filter-content::-webkit-scrollbar {
+  display: none;
+}
+
+.municipality-filter-row.is-wrap .municipality-filter-content {
+  display: block;
+  overflow: visible;
+}
+
+.municipality-filter-row.is-wrap .municipality-filter-content-shell {
+  display: block;
+}
+
+.municipality-filter-row.is-wrap .municipality-filter-prefecture-tag {
+  margin: 0 4px 4px 0;
+  vertical-align: top;
+}
+
+.municipality-filter-drag-scroll {
+  top: -3px;
+  bottom: -3px;
+  width: 36px;
+}
+
+.municipality-filter-drag-scroll.municipality-drag-scroll-left {
+  left: 0;
+  transform: translateX(calc(-100% - 8px));
+}
+
+.municipality-filter-drag-scroll.municipality-drag-scroll-right {
+  right: 0;
+  transform: translateX(calc(100% + 8px));
+}
+
+.municipality-filter-drag-cancel-drop {
+  top: -3px;
+  bottom: -3px;
+}
+
+.municipality-filter-drag-cancel-drop.is-single.is-without-scroll-zones {
+  right: 0;
+  transform: translateX(calc(100% + 8px));
+}
+
+.municipality-filter-insert-line {
+  top: 2px;
+  bottom: 2px;
+}
+
+.municipality-filter-control-list {
+  position: relative;
+  z-index: 2;
+  grid-column: 2;
+  grid-row: 1;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.municipality-filter-row.is-single.is-dragging .municipality-filter-control-list {
+  z-index: 1;
+}
+
+.municipality-filter-row.is-wrap .municipality-filter-control-list {
+  float: right;
+  margin: 0 0 4px 4px;
+}
+
+.municipality-kind-filter-list,
+.municipality-special-filter-list {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.municipality-kind-filter-list {
+  gap: 0;
+  padding: 2px;
+  border-radius: 6px;
+  background: #e2e8f0;
+}
+
+.municipality-filter-prefecture-tag {
+  min-height: 26px;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px 2px 2px 7px;
+  border: 1px solid rgba(33, 54, 76, 0.18);
+  border-radius: 6px;
+  background: var(--prefecture-filter-bg, #dbeafe);
+  color: #172338;
+  cursor: default;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.municipality-filter-prefecture-tag.is-inactive {
+  border-style: dashed;
+  border-color: #9aa7b4;
+  color: #617083;
+  cursor: pointer;
+}
+
+.municipality-filter-prefecture-tag.is-dragged {
+  opacity: 0.45;
+}
+
+.municipality-filter-prefecture-name {
+  white-space: nowrap;
+}
+
+.municipality-filter-prefecture-remove {
+  width: 17px;
+  height: 18px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 2px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #52657c;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.municipality-filter-prefecture-remove:hover {
+  background: rgba(255, 255, 255, 0.52);
+  color: #102234;
+}
+
+.municipality-kind-toggle,
+.municipality-special-filter-toggle {
+  min-height: 26px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  padding: 2px 8px;
+  border: 1px solid #c8d4e2;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #52647a;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.municipality-special-filter-toggle {
+  border-color: #b9d0c2;
+  color: #315142;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.municipality-kind-toggle.active,
+.municipality-special-filter-toggle.active {
+  border-color: #618298;
+  color: #183246;
+  box-shadow: inset 0 0 0 1px #83a2b8;
+}
+
+.municipality-special-filter-toggle.active {
+  border-color: #8fb4a6;
+  background: #e7f3ee;
+  color: #173b2e;
+  box-shadow: none;
+}
+
+.municipality-kind-filter-list .municipality-kind-toggle {
+  min-height: 22px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.municipality-kind-filter-list .municipality-kind-toggle:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.municipality-kind-filter-list .municipality-kind-toggle:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.municipality-kind-filter-list .municipality-kind-toggle.active {
+  background: #e7f3ee;
+  color: #173b2e;
+  box-shadow: inset 0 0 0 1px #8fb4a6;
+}
+
+.municipality-filter-mode-toggle {
+  min-width: 42px;
+  min-height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 7px;
+  border: 1px solid #b9c8d8;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #29445c;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.municipality-filter-mode-toggle:hover {
+  background: #e8f0f6;
+}
+
+.municipality-result-list {
+  max-height: 320px;
+  overflow-y: auto;
+  padding: 4px;
+}
+
+.municipality-result-list.is-col-grid {
+  --dropdown-list-col-min-width: 150px;
+  display: grid;
+  grid-template-columns: repeat(var(--dropdown-list-col-count), minmax(var(--dropdown-list-col-min-width), 1fr));
+  gap: 2px;
+  min-width: calc(var(--dropdown-list-col-count) * var(--dropdown-list-col-min-width));
+  overflow: auto;
+}
+
+.municipality-result-list.is-col-grid .municipality-result-item {
+  position: relative;
+  min-width: 0;
+  padding-right: 62px;
+}
+
+.municipality-result-list.is-col-grid .municipality-result-selected-badge {
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  transform: translateY(-50%);
+}
+
+.municipality-dropdown-view {
+  display: flex;
+  min-height: 0;
+  max-height: 420px;
+  flex-direction: column;
+}
+
+.municipality-dropdown-header {
+  display: grid;
+  grid-template-columns: auto minmax(120px, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
+  border-bottom: 1px solid #dbe3ed;
+  background: #f6f9fc;
+}
+
+.municipality-dropdown-title {
+  color: #506174;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.dropdown-col-control,
+.dropdown-col-control-spacer {
+  min-width: 118px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-col-control {
+  gap: 3px;
+}
+
+.dropdown-col-button {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid #b9c8d8;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #29445c;
+  cursor: pointer;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.dropdown-col-button:hover:not(:disabled) {
+  background: #e8f0f6;
+}
+
+.dropdown-col-button:disabled {
+  color: #a6b3c2;
+  cursor: default;
+}
+
+.dropdown-col-value {
+  min-width: 34px;
+  color: #29445c;
+  font-size: 12px;
+  font-weight: 850;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.selector-guidance-text {
+  color: #8a97a6;
+  font-size: 11px;
+  font-weight: 650;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.prefecture-map-selection-guide {
+  min-width: 118px;
+}
+
+.municipality-compact-table {
+  min-height: 0;
+  max-height: 374px;
+  overflow: auto;
+  padding: 5px;
+  background: #ffffff;
+}
+
+.municipality-dropdown-loading {
+  min-height: 168px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #ffffff;
+  color: #506174;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.municipality-dropdown-loading-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #d6e2ee;
+  border-top-color: #2d579e;
+  border-radius: 50%;
+  animation: municipality-dropdown-spin 0.8s linear infinite;
+}
+
+.municipality-dropdown-loading-text {
+  white-space: nowrap;
+}
+
+@keyframes municipality-dropdown-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.municipality-compact-region-row {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  align-items: stretch;
+  border-bottom: 1px solid #d9e3ee;
+}
+
+.municipality-compact-region-row:first-child {
+  border-top: 1px solid #d9e3ee;
+}
+
+.municipality-compact-region-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 2px;
+  border-right: 1px solid rgba(33, 54, 76, 0.2);
+  border-left: 1px solid rgba(33, 54, 76, 0.2);
+  background: var(--municipality-compact-region-bg, #dbeafe);
+  color: #172338;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.05;
+  text-align: center;
+  writing-mode: vertical-rl;
+}
+
+.municipality-compact-prefecture-row-list {
+  min-width: 0;
+  display: grid;
+}
+
+.municipality-compact-prefecture-row {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  align-items: stretch;
+  border-bottom: 1px solid #e3ebf3;
+}
+
+.municipality-compact-prefecture-row:last-child {
+  border-bottom: 0;
+}
+
+.municipality-compact-prefecture-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 2px;
+  border-right: 1px solid #d3dee9;
+  background: #f2f6fa;
+  color: #22354b;
+  font-size: 12px;
+  font-weight: 850;
+  line-height: 1.05;
+  text-align: center;
+  writing-mode: vertical-rl;
+}
+
+.municipality-compact-item-list {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(82px, 1fr));
+  gap: 2px;
+  padding: 2px;
+  background: #ffffff;
+}
+
+.municipality-compact-item {
+  position: relative;
+  min-width: 0;
+  min-height: 34px;
+  display: inline-grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  padding: 4px 5px;
+  border: 1px solid #d7e0ea;
+  border-radius: 3px;
+  background: #ffffff;
+  color: #1d2e43;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.municipality-compact-item:hover {
+  border-color: #95aac0;
+  background: #f1f6fa;
+}
+
+.municipality-compact-item.is-selected {
+  border-color: #8fb4a6;
+  background: #e7f3ee;
+  color: #14382c;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.78);
+}
+
+.municipality-compact-item-name {
+  min-width: 0;
+  display: block;
+  overflow: visible;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.municipality-compact-item-name-line {
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.municipality-compact-item-name.is-long {
+  font-size: 11px;
+  line-height: 1.12;
+}
+
+.municipality-compact-item-name.is-very-long {
+  font-size: 10px;
+  line-height: 1.1;
+}
+
+.municipality-compact-selected-mark {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  min-width: 14px;
+  height: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #78a391;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #1f5b47;
+  font-size: 9px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.prefecture-dropdown {
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  max-height: 520px;
+  min-height: 0;
+}
+
+.prefecture-dropdown-header {
+  display: grid;
+  grid-template-columns: auto minmax(120px, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
+  border-bottom: 1px solid #dbe3ed;
+  background: #f6f9fc;
+}
+
+.prefecture-dropdown-title {
+  color: #506174;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.prefecture-dropdown-map-panel {
+  max-height: 470px;
+  overflow: auto;
+  padding: 8px;
+}
+
+.prefecture-dropdown-region-panel {
+  max-height: 310px;
+  overflow: auto;
+  padding: 7px;
+}
+
+.prefecture-dropdown-list-panel {
+  min-height: 0;
+}
+
+.prefecture-dropdown-list-panel .municipality-result-list.is-col-grid {
+  --dropdown-list-col-min-width: 118px;
+}
+
+.prefecture-region-table {
+  display: grid;
+  gap: 4px;
+}
+
+.prefecture-region-row {
+  display: grid;
+  grid-template-columns: 102px minmax(0, 1fr);
+  align-items: stretch;
+  gap: 5px;
+}
+
+.prefecture-region-tag {
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  border: 1px solid rgba(33, 54, 76, 0.18);
+  border-radius: 6px;
+  background: var(--prefecture-region-bg, #dbeafe);
+  color: #172338;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.prefecture-region-cell-list {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  grid-auto-rows: minmax(32px, auto);
+  gap: 4px;
+}
+
+.selector-keep-open-boundary {
+  display: contents;
+}
+
+.prefecture-region-cell {
+  position: relative;
+  min-width: 0;
+  min-height: 32px;
+  display: inline-grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  padding: 4px 6px;
+  border: 1px solid #d7e0ea;
+  border-radius: 3px;
+  background: #ffffff;
+  color: #1d2e43;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.prefecture-region-cell:hover {
+  border-color: #95aac0;
+  background: #f1f6fa;
+}
+
+.prefecture-region-cell.is-disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.prefecture-region-cell.is-disabled:hover {
+  border-color: #d7e0ea;
+  background: #ffffff;
+}
+
+.prefecture-region-cell.is-selected {
+  border-color: #8fb4a6;
+  background: #e7f3ee;
+  color: #14382c;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.78);
+}
+
+.prefecture-region-cell.is-selected:hover {
+  background: #d8ede5;
+}
+
+.prefecture-region-cell-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.prefecture-region-cell-selected {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  min-width: 14px;
+  height: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #78a391;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #1f5b47;
+  font-size: 9px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+@container (max-width: 560px) {
+  .prefecture-dropdown-region-panel {
+    padding: 5px;
+  }
+
+  .prefecture-region-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .prefecture-region-tag {
+    justify-self: start;
+    min-height: 24px;
+    padding: 3px 8px;
+  }
+
+  .prefecture-region-cell-list {
+    grid-template-columns: repeat(auto-fill, minmax(66px, 1fr));
+  }
+}
+
+.prefecture-map-select-jp .prefecture-selector {
+  min-width: 0;
+}
+
+.prefecture-map-select-jp .prefecture-selector-map-frame,
+.prefecture-map-select-jp .prefecture-selector-map {
+  width: 100%;
+  min-width: 0;
+}
+
+.prefecture-map-select-jp .prefecture-selector-map-component {
+  font-size: 11px;
+}
+
+.municipality-result-item {
+  width: 100%;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 8px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #18283b;
+  text-align: left;
+  cursor: pointer;
+}
+
+.municipality-result-item:hover {
+  background: #eef4f8;
+}
+
+.municipality-result-item.is-selected {
+  background: #e7f3ee;
+  color: #15372c;
+}
+
+.municipality-result-item.is-selected:hover {
+  background: #d8ede5;
+}
+
+.municipality-result-name {
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.municipality-result-selected-badge {
+  flex: 0 0 auto;
+  min-height: 22px;
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 7px;
+  border: 1px solid #8eb7a6;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #1f5b47;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.municipality-empty {
+  padding: 22px 10px;
+  color: #728297;
+  text-align: center;
+  font-size: 13px;
+}
+
+.region-selector-chip[draggable='true'] {
+  cursor: grab;
+}
+
+.region-selector-chip[draggable='true']:active {
+  cursor: grabbing;
+}
+
+.region-selector-chip.is-dragged {
+  opacity: 0.45;
+}
+
+.region-selector-insert-line {
+  z-index: 10;
+}
+/* the header of the panel (its host page styled it before; ShikuchosonSelector.jsx) */
+.shikuchoson-object {
+  margin: 1rem 0 1.5rem;
+}
+
+.shikuchoson-panel .feature-header {
+  display: flex;
+  justify-content: center;
+}
+
+.shikuchoson-panel .feature-header > div {
+  width: min(760px, 100%);
+}
+
+.shikuchoson-panel .feature-header .eyebrow {
+  margin: 0;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.shikuchoson-panel .feature-header h2 {
+  margin: 2px 0 0;
+  color: #172033;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.3;
+}

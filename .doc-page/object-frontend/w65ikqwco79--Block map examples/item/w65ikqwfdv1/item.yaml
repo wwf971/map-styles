@@ -1,0 +1,25 @@
+itemId: w65ikqwfdv1
+name: ""
+lang: yaml
+contentType: text/yaml
+fileExt: yaml
+owner:
+  ref: frontend:w65ikqwco79
+  role: entry
+versionIdHead: w65ikqwft27
+isDeleted: false
+isLocked: false
+timeCreated: 20261116_03591113+09
+versionList:
+  - versionId: w65ikqwft27
+    versionIdPrevList: []
+    time: 20261116_03591113+09
+    note: the entry of the frontend object Block map examples
+    size: 143
+    hash: 36452aa42e4bd91179c2e477b455e8195ecaa150
+    isLocked: false
+    dependencyList: []
+eventList:
+  - eventType: create
+    time: 20261116_03591113+09
+    versionId: w65ikqwft27

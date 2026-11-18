@@ -1,0 +1,15 @@
+# the assets of the frontend object lying in this folder and below, down to a folder with an
+# item-list.yaml of its own: written by the page (doc_page_impl_obj_frontend.md#the-item-lists)
+assetList:
+  - key: jp-prefecture
+    kind: map
+    itemId: w65il1p4e53
+    name: 日本都道府県タイルマップ
+    pathList:
+      - /example/map/jp-prefecture
+  - key: jp-prefecture-wide
+    kind: map
+    itemId: w65il1pog70
+    name: 日本都道府県タイルマップ (16×20, 2026-06-22)
+    pathList:
+      - /example/map/jp-prefecture-wide

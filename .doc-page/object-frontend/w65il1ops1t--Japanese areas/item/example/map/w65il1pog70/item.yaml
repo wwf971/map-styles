@@ -1,0 +1,25 @@
+itemId: w65il1pog70
+name: ""
+lang: json
+contentType: application/json
+fileExt: json
+owner:
+  ref: frontend:w65il1ops1t
+saveMode: newVersion
+versionIdHead: w65il1poi19
+isDeleted: false
+isLocked: false
+timeCreated: 20261116_03592111+09
+versionList:
+  - versionId: w65il1poi19
+    versionIdPrevList: []
+    time: 20261116_03592111+09
+    note: "converted to format v2 from version 1 of the config japan-prefecture-tile-grid-map of the sqlite backend (created 20260622_15405334+09), equal to map-block/config/prefectureTileGridMapBakJp.ts"
+    size: 7703
+    hash: 7afc0c18011c2f8613555f751f55db1ae5c1330a
+    isLocked: false
+    dependencyList: []
+eventList:
+  - eventType: create
+    time: 20261116_03592111+09
+    versionId: w65il1poi19

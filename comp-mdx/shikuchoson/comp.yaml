@@ -1,0 +1,6 @@
+# The components of the Japanese area selector (doc/shikuchoson.md): the mode of a frontend object
+# of the type shikuchoson.jp (type.yaml at the top of the package), rendered by ObjectFrontend.
+compList:
+  - tagName: ShikuchosonSelector
+    entry: ./shikuchoson-comp.js
+    export: ShikuchosonSelectorDefine

@@ -1,0 +1,6 @@
+name: Japanese areas
+type: shikuchoson.jp
+description: The regions, prefectures and municipalities of Japan, and the tile
+  map of the prefectures.
+metadata:
+  mapPrefecture: jp-prefecture

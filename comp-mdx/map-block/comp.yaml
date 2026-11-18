@@ -1,0 +1,10 @@
+# The components of block maps (doc/map-block.md): modes of a frontend object of the type
+# map-block.map-set (type.yaml at the top of the package), rendered by the entry component
+# ObjectFrontend, never written as blocks themselves.
+compList:
+  - tagName: MapBlockEditor
+    entry: ./map-block-comp.js
+    export: MapBlockEditorDefine
+  - tagName: MapBlockView
+    entry: ./map-block-comp.js
+    export: MapBlockViewDefine

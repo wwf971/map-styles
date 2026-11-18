@@ -1,0 +1,16 @@
+{
+  "formatVersion": 2,
+  "label": "Shapes",
+  "grid": {"rowStart":1,"rowEnd":10,"colStart":1,"colEnd":14,"cellAspectRatio":{"width":1,"height":1}},
+  "view": {"mapWidthMax":620,"backgroundColor":"#eaf5ff","groupGreyedIdList":[]},
+  "compList": [
+    {"id":"group-north","kind":"group","label":"North","shape":{"type":"rect","rowStart":1,"rowEnd":1,"colStart":1,"colEnd":2},"childIdList":["west","east","l-shape"]},
+    {"id":"group-south","kind":"group","label":"South","shape":{"type":"rect","rowStart":1,"rowEnd":1,"colStart":4,"colEnd":5},"childIdList":["u-shape","slanted","tower"]},
+    {"id":"west","kind":"block","label":"West","shape":{"type":"rect","rowStart":3,"rowEnd":4,"colStart":1,"colEnd":3}},
+    {"id":"east","kind":"block","label":"East","shape":{"type":"rect","rowStart":3,"rowEnd":4,"colStart":4,"colEnd":5}},
+    {"id":"l-shape","kind":"block","label":"L shape","shape":{"type":"polygon","pointList":[[3,7],[3,9],[5,9],[5,11],[7,11],[7,7]]}},
+    {"id":"u-shape","kind":"block","label":"U shape","shape":{"type":"polygon","pointList":[[7,1],[7,2],[9,2],[9,4],[7,4],[7,5],[11,5],[11,1]]}},
+    {"id":"slanted","kind":"block","label":"Slanted","shape":{"type":"polygon","pointList":[[7,8],[9,10],[11,8],[9,6]]}},
+    {"id":"tower","kind":"block","label":"Tower","shape":{"type":"rect","rowStart":7,"rowEnd":10,"colStart":12,"colEnd":13}}
+  ]
+}

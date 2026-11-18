@@ -1,0 +1,8 @@
+# The config of the package "map-styles" (react-doc: main/doc_page_impl_package.md).
+# Its name and place are fixed: doc-package.yaml at the root of the package; every key is required.
+name: map-styles
+description: >-
+  Maps drawn in styles of their own, kept as frontend objects: block maps on a grid of cells
+  (rectangles and polygons, in groups), edited in place and used as selectors, and on them the
+  selection of Japanese regions, prefectures and municipalities.
+packageDependList: []
